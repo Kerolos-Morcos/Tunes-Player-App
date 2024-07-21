@@ -1,6 +1,6 @@
 # tunes_player_app
 
-A new Flutter project.
+My fifth Flutter project in my learning process.
 
 ## Getting Started
 
