@@ -1,16 +1,20 @@
+import 'dart:developer';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-class TunesModel 
-{
+class TunesModel {
   final Color color;
   final String sound;
 
   const TunesModel({required this.color, required this.sound});
 
-  void playSound()
-  {
+  void playSound() async {
     final player = AudioPlayer();
-    player.play(AssetSource(sound));
+    try {
+      await player.play(AssetSource(sound));
+    } catch (e) {
+      log('Error playing sound: $e');
+    }
   }
 }

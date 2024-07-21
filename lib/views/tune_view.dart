@@ -18,15 +18,15 @@ class TunesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter Tune'),
-          backgroundColor: const Color(0xff243139),
-          centerTitle: true,
-          elevation: 0,
-        ),
-        body: Column(
-          children: 
-          tunes.map((e) => TuneItem(tunes: e)).toList(),
-        ));
+      appBar: AppBar(
+        title: const Text('Flutter Tune', style: TextStyle(color: Colors.white)),
+        backgroundColor: const Color(0xff243139),
+        centerTitle: true,
+        elevation: 0,
+      ),
+      body: Column(
+        children: tunes.map((e) => TuneItem(tunes: e)).toList(),
+      ),
+    );
   }
 }
